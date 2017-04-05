@@ -12,6 +12,7 @@ class MovieDetailsViewController: UIViewController {
 
     var url: String?
     var movieDesc: String?
+    var movieName: String = ""
 
     @IBOutlet weak var movieImage: UIView!
     @IBOutlet weak var movieDetailsLabel: UILabel!
@@ -25,6 +26,7 @@ class MovieDetailsViewController: UIViewController {
         movieImageView.setImageWith((URL(string: url!)!))
         movieDetailsLabel.text = movieDesc
         movieDetailsLabel.sizeToFit()
+
         movieImage.bringSubview(toFront: movieDetailsContainer)
     }
 

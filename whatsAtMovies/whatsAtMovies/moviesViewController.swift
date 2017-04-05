@@ -45,12 +45,17 @@ class moviesViewController: UIViewController, UITableViewDataSource, UITableView
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let cell = sender as! PhotoCell
+        if (segue.identifier == "showMovieDetailsSegue"){
+            let cell = sender as! PhotoCell
+            if let indexPath = mTableView.indexPathForSelectedRow{
+                mTableView.deselectRow(at: indexPath, animated: true)
+            }
+            let destination = segue.destination as! MovieDetailsViewController
         
-        let destination = segue.destination as! MovieDetailsViewController
-        
-        destination.url = cell.mainImageURL
-        destination.movieDesc = cell.movieDesc
+            destination.url = cell.mainImageURL
+            destination.movieDesc = cell.movieDesc
+            destination.movieName = cell.movieName!
+        }
     }
     
     // Makes a network request to get updated data
@@ -92,7 +97,13 @@ class moviesViewController: UIViewController, UITableViewDataSource, UITableView
             
             cell.mainImageURL = fullImageUrl
             cell.movieDesc = movieDetails
+            cell.movieName = cell.movieTitle.text
             cell.posterImg.setImageWith(URL(string: posterImgUrl)!)
+            
+            // add red back ground color for the selected cell
+            let backgroundView = UIView()
+            backgroundView.backgroundColor = UIColor.blue
+            cell.selectedBackgroundView = backgroundView
         }
 
         return cell
@@ -145,6 +156,12 @@ class moviesViewController: UIViewController, UITableViewDataSource, UITableView
     }
     */
 
+    @IBAction func bookMovieTicket (segue: UIStoryboardSegue){
+        // Hook up this code with ticket booking page
+        let movieInformationController = segue.source as! MovieDetailsViewController
+        
+        print ("booked tickets for " + movieInformationController.movieName)
+    }
 }
 
 
@@ -156,4 +173,5 @@ class PhotoCell: UITableViewCell {
     
     var mainImageURL: String?
     var movieDesc: String?
+    var movieName: String?
 }
