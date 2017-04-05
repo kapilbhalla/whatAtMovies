@@ -12,9 +12,12 @@
 		90A1FAB31E93260C00940B68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90A1FAB21E93260C00940B68 /* Assets.xcassets */; };
 		90A1FAB61E93260C00940B68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90A1FAB41E93260C00940B68 /* LaunchScreen.storyboard */; };
 		90A1FABE1E93271D00940B68 /* moviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A1FABD1E93271D00940B68 /* moviesViewController.swift */; };
+		90A1FAC01E94813B00940B68 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A1FABF1E94813B00940B68 /* MovieDetailsViewController.swift */; };
+		CDEEF6E51E51F7394829F452 /* Pods_whatsAtMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C665A25D4A78A0AC89BEE3 /* Pods_whatsAtMovies.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28C665A25D4A78A0AC89BEE3 /* Pods_whatsAtMovies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_whatsAtMovies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90A1FAA81E93260C00940B68 /* whatsAtMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whatsAtMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90A1FAAB1E93260C00940B68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90A1FAB01E93260C00940B68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -22,6 +25,9 @@
 		90A1FAB51E93260C00940B68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90A1FAB71E93260C00940B68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90A1FABD1E93271D00940B68 /* moviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = moviesViewController.swift; sourceTree = "<group>"; };
+		90A1FABF1E94813B00940B68 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
+		A953FEBA0C48A1E36C34B229 /* Pods-whatsAtMovies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatsAtMovies.debug.xcconfig"; path = "Pods/Target Support Files/Pods-whatsAtMovies/Pods-whatsAtMovies.debug.xcconfig"; sourceTree = "<group>"; };
+		E314D6CEE26BC64801EF2139 /* Pods-whatsAtMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatsAtMovies.release.xcconfig"; path = "Pods/Target Support Files/Pods-whatsAtMovies/Pods-whatsAtMovies.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDEEF6E51E51F7394829F452 /* Pods_whatsAtMovies.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		106E80AD18586BA7C227CAEA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A953FEBA0C48A1E36C34B229 /* Pods-whatsAtMovies.debug.xcconfig */,
+				E314D6CEE26BC64801EF2139 /* Pods-whatsAtMovies.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2D63E97C631A19662CEC3894 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28C665A25D4A78A0AC89BEE3 /* Pods_whatsAtMovies.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		90A1FA9F1E93260C00940B68 = {
 			isa = PBXGroup;
 			children = (
 				90A1FAAA1E93260C00940B68 /* whatsAtMovies */,
 				90A1FAA91E93260C00940B68 /* Products */,
+				106E80AD18586BA7C227CAEA /* Pods */,
+				2D63E97C631A19662CEC3894 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +86,7 @@
 				90A1FAB41E93260C00940B68 /* LaunchScreen.storyboard */,
 				90A1FAB71E93260C00940B68 /* Info.plist */,
 				90A1FABD1E93271D00940B68 /* moviesViewController.swift */,
+				90A1FABF1E94813B00940B68 /* MovieDetailsViewController.swift */,
 			);
 			path = whatsAtMovies;
 			sourceTree = "<group>";
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90A1FABA1E93260C00940B68 /* Build configuration list for PBXNativeTarget "whatsAtMovies" */;
 			buildPhases = (
+				7FDFE9AA0CD32B536013F685 /* [CP] Check Pods Manifest.lock */,
 				90A1FAA41E93260C00940B68 /* Sources */,
 				90A1FAA51E93260C00940B68 /* Frameworks */,
 				90A1FAA61E93260C00940B68 /* Resources */,
+				88901F7AF8035898A435480D /* [CP] Embed Pods Frameworks */,
+				6F67E84A03900926BD461B33 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +161,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6F67E84A03900926BD461B33 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-whatsAtMovies/Pods-whatsAtMovies-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7FDFE9AA0CD32B536013F685 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		88901F7AF8035898A435480D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-whatsAtMovies/Pods-whatsAtMovies-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		90A1FAA41E93260C00940B68 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -138,6 +216,7 @@
 			files = (
 				90A1FAAC1E93260C00940B68 /* AppDelegate.swift in Sources */,
 				90A1FABE1E93271D00940B68 /* moviesViewController.swift in Sources */,
+				90A1FAC01E94813B00940B68 /* MovieDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +337,7 @@
 		};
 		90A1FABB1E93260C00940B68 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A953FEBA0C48A1E36C34B229 /* Pods-whatsAtMovies.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = whatsAtMovies/Info.plist;
@@ -270,6 +350,7 @@
 		};
 		90A1FABC1E93260C00940B68 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E314D6CEE26BC64801EF2139 /* Pods-whatsAtMovies.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = whatsAtMovies/Info.plist;
@@ -299,6 +380,7 @@
 				90A1FABC1E93260C00940B68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
